@@ -1,0 +1,1 @@
+export type SidebarStatus = "open" | "close" | "hidden"
