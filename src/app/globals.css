@@ -79,7 +79,7 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
+  --background: #23193F;
   --foreground: oklch(0.985 0 0);
   --card: oklch(0.205 0 0);
   --card-foreground: oklch(0.985 0 0);
@@ -119,4 +119,26 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+section {
+  padding-block: 4rem;
+}
+
+.swiper {
+  width: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+  max-width: 300px;
+  max-height: 300px;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
 }

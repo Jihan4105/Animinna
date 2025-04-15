@@ -23,9 +23,8 @@ export default function Navbar() {
             <Image 
               src={"/images/logo.png"}
               alt="Logo"
-              className="lg:w-[200px]"
-              width={100}
-              height={100}
+              width={188}
+              height={37}
             />
           </Link>
           <Link className="hidden sm:flex" href="/library">Library</Link>

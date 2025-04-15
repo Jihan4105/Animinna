@@ -6,7 +6,7 @@ export default function Sidebar({ status, setSidebarStatus }: {
   setSidebarStatus: Dispatch<SetStateAction<SidebarStatus>>
 }) {
   return (
-    <div className={`fixed top-0 right-0 h-screen w-1/2 bg-white dark:bg-gray-900 shadow-lg transition-transform duration-300 ${status === "open" ? "translate-x-0" : "translate-x-full"} sm:hidden`}>
+    <div className={`fixed top-0 right-0 h-screen w-1/2 bg-white dark:bg-[#2D1F50] shadow-lg transition-transform duration-300 ${status === "open" ? "translate-x-0" : "translate-x-full"} sm:hidden`}>
       <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-700">
         <h2 className="text-lg font-semibold">Menu</h2>
         <button className="text-gray-500 hover:text-gray-700 cursor-pointer" onClick={() => {setSidebarStatus("close")}}>
