@@ -11,18 +11,25 @@ export const metadata: Metadata = {
 export default function LandingPage() {
   return (
     <>
+      <video 
+        autoPlay 
+        muted 
+        loop 
+        className="absolute top-0 left-0 z-[10] min-w-screen min-h-screen max-w-none"
+      >
+        <source src="/video.mp4" type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+
       {/* Hero section */}
-      <section>
-        <div>
-          <h1>Discover Your Masterpieces Anime</h1>
-          <p>The widest and most fantasic “Sekai” for who loves anime</p>
-          <div>
+      <section className="grid grid-cols-1 md:grid-cols-2 place-items-center relative z-[30] mb-100">
+        <div className="flex flex-col gap-4">
+          <h1 className="font-black text-4xl sm:text-[60px]">Discover Your<br/>Masterpieces<br/>Anime</h1>
+          <p className="md:text-[18px]">The widest and most fantasic “Sekai” for who loves anime</p>
+          <div className="flex flex-col gap-2">
             <CustomButton label="visit library" variant="default" href="/library" />
             <CustomButton label="view news" variant="outline" href="/news" />
           </div>
-        </div>
-        <div>
-          <video src="/video.mp4" autoPlay muted loop></video>
         </div>
       </section>
 

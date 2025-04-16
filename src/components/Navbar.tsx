@@ -17,7 +17,7 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="flex items-center justify-between py-4">
+      <nav className="relative z-[100] flex items-center justify-between py-4">
         <div className="flex items-center gap-5">
           <Link href="/landing">
             <Image 

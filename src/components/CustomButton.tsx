@@ -19,7 +19,7 @@ export default function CustomButton({
             ${variant === "default" ? "bg-[#9293DC] text-white" : "bg-transparent border border-[#9293DC] dark:border-[#FFFFFF] text-[#9293DC]"}  
           `}
         >
-          <p className="text-[25px] font-bold">{label.toLocaleUpperCase()}</p>
+          <p className="text-[20px] md:text-[25px] font-bold">{label.toLocaleUpperCase()}</p>
         </button>
       </Link>
     )
@@ -30,7 +30,7 @@ export default function CustomButton({
         ${variant === "default" ? "bg-[#9293DC] text-white" : "bg-transparent border border-[#9293DC] dark:border-[#FFFFFF]"}  
       `}
     >
-      <p className="text-[25px] font-bold">{label.toLocaleUpperCase()}</p>
+      <p className="text-[20px] md:text-[25px] font-bold">{label.toLocaleUpperCase()}</p>
     </button>
   )
 }
