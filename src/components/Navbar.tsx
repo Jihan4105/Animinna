@@ -27,8 +27,8 @@ export default function Navbar() {
               height={37}
             />
           </Link>
-          <Link className="hidden sm:flex" href="/library">Library</Link>
-          <Link className="hidden sm:flex" href="/news">News</Link>
+          <Link className="hidden sm:flex text-white" href="/library">Library</Link>
+          <Link className="hidden sm:flex text-white" href="/news">News</Link>
         </div>
         <div className="flex items-center gap-2">
           <ModeToggle />

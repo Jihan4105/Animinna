@@ -3,6 +3,7 @@ import { Metadata } from "next"
 
 import LandingSwiper from "@/components/LandingSwiper"
 import CustomButton from "@/components/CustomButton"
+import BlurCircle from "@/components/BlurCircle"
 
 export const metadata: Metadata = {
   title: "Landing"
@@ -11,21 +12,20 @@ export const metadata: Metadata = {
 export default function LandingPage() {
   return (
     <>
-      <video 
-        autoPlay 
-        muted 
-        loop 
-        className="absolute top-0 left-0 z-[10] min-w-screen min-h-screen max-w-none"
-      >
-        <source src="/video.mp4" type="video/mp4" />
-        Your browser does not support the video tag.
-      </video>
+      {/* Background video */}
+      <div className="absolute top-0 left-0 w-full h-[643px] sm:h-[698.97px] md:h-[743.97px] lg-[716.97px]">
+        <video autoPlay loop muted className="w-full h-full object-cover -z-10">
+          <source src="/video.mp4" type="video/mp4"/>
+          Your browser does not support the video tag.
+        </video>
+        <div className="absolute top-0 left-0 w-full h-full -z-5 bg-white/50" />
+      </div>
 
       {/* Hero section */}
-      <section className="grid grid-cols-1 md:grid-cols-2 place-items-center relative z-[30] mb-100">
-        <div className="flex flex-col gap-4">
-          <h1 className="font-black text-4xl sm:text-[60px]">Discover Your<br/>Masterpieces<br/>Anime</h1>
-          <p className="md:text-[18px]">The widest and most fantasic “Sekai” for who loves anime</p>
+      <section className="grid grid-cols-1 md:grid-cols-2 place-items-center relative">
+        <div className="flex flex-col gap-4 py-[72px]">
+          <h1 className="font-black text-4xl sm:text-[60px] text-white">Discover Your<br/>Masterpieces<br/>Anime</h1>
+          <p className="md:text-[18px] text-white">The widest and most fantasic “Sekai” for who loves anime</p>
           <div className="flex flex-col gap-2">
             <CustomButton label="visit library" variant="default" href="/library" />
             <CustomButton label="view news" variant="outline" href="/news" />
@@ -34,13 +34,14 @@ export default function LandingPage() {
       </section>
 
       {/* Swiper section */}
-      <section>
-        <div>
+      <section className="grid grid-cols-1 md:grid-cols-2 place-items-center gap-8">
+        <div className="relative">
           <LandingSwiper />
+          <BlurCircle color="orange" x={0} y={0} />
         </div>
         <div>
-          <h2>Wise Library</h2>
-          <p>With various tastes and different perspectives, we will introduce Otaku culture regardless of genre and number</p>
+          <h2 className="text-4xl font-black mb-3">Wise Library</h2>
+          <p className="text-[18px]">With various tastes and different perspectives, we will introduce Otaku culture regardless of genre and number</p>
         </div>
       </section>
 

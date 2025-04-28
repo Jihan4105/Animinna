@@ -142,3 +142,10 @@ section {
   display: block;
   width: 100%;
 }
+
+@media screen and (max-width: 640px) {
+  .swiper-slide {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
